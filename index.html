@@ -7,6 +7,22 @@
 		<body>
 
 		{{test}}
+			<div class='quoteDiplay'>
+				<ul class="quotesList">
+					<li ng-repeat="key in quote" class="quoteItem">
+						{{key.text}}
+							<div class="quoteAuthor">
+							{{key.author}}
+							</div>
+					</li>
+				</ul>
+			</div>
+
+			<input ng-model='newQuote.text' placeholder='Quote Text'>
+			<input ng-model='newQuote.author' placeholder='Quote Author'>
+			<button ng-click='submitButton()'>Add Quote</button>
+			<button ng-click='removeButton()'>Remove Quote</button>
+			<button ng-click='filterButton() | filter:newQuote'>Filter Quotes</button>
 
 
 			<script type="text/javascript" src='js/angular.min.js'></script>

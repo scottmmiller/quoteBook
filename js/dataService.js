@@ -1,6 +1,6 @@
 var app = angular.module('quoteBook');
 
-app.dataService('dataService', function () {
+app.service('dataService', function () {
 
 	var quotes = [
 	    { 
@@ -12,38 +12,40 @@ app.dataService('dataService', function () {
 		},
 	    { 
 	    	text: 'Strive not to be a success, but rather to be of value.', 
-	    	author: 'Albert Einstein'},
+	    	author: 'Albert Einstein'
+	    },
 	    { 
 	    	text: 'Two roads diverged in a wood, and I took the one less traveled by, And that has made all the difference.', 
-	    	author: 'Robert Frost'},
+	    	author: 'Robert Frost'
+	    },
 	    { 
 	    	text: 'The most difficult thing is the decision to act, the rest is merely tenacity.', 
-	    	author: 'Amelia Earhart'},
+	    	author: 'Amelia Earhart'
+	    },
 	    { 
 	    	text: 'Life is what happens to you while you\'re busy making other plans.', 
-	    	author: 'John Lennon'},
+	    	author: 'John Lennon'
+	    },
 	    { 
 	    	text: 'What even is a jQuery?', 
-	    	author: 'Tyler S. McGinnis'}
+	    	author: 'Tyler S. McGinnis'
+	    }
 	  ];
 
-	var getData = function() {
+
+	this.getData = function() {
 		return quotes;
 	};
 
-	var addData = function(dataObject) {
-		for (key in dataObject) {
-			if (dataObject.text === true && dataObject.author === true;) {
-			quotes.push(key.text, key.author);
-			};
+	this.addData = function(text, author) {
+		if (text && author) {
+			quotes.push({text: text, author: author});
 		};
 	};
 
-	var removeData = function () {
-
-		for (var i = 0; i < quote.length; i++) {
-
-		}
+	this.removeData = function () {
+		if ()
+		
 
 	};
 
