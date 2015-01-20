@@ -27,5 +27,27 @@ app.dataService('dataService', function () {
 	    	author: 'Tyler S. McGinnis'}
 	  ];
 
+	var getData = function() {
+		return quotes;
+	};
+
+	var addData = function(dataObject) {
+		for (key in dataObject) {
+			if (dataObject.text === true && dataObject.author === true;) {
+			quotes.push(key.text, key.author);
+			};
+		};
+	};
+
+	var removeData = function () {
+
+		for (var i = 0; i < quote.length; i++) {
+
+		}
+
+	};
+
+
+
 
 });
