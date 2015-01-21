@@ -8,9 +8,10 @@ app.controller('MainController', function($scope, dataService) {
 		$scope.quote = dataService.getData();
 	};
 
-	$scope.getQuotes();
+	
+	/*BUTTON FUNCTIONS*/
 
-	$scope.submitButton = function() {
+	$scope.addButton = function() {
 		dataService.addData($scope.newQuote.text, $scope.newQuote.author);
 		$scope.newQuote.text = '';
 		$scope.newQuote.author = '';
@@ -21,5 +22,29 @@ app.controller('MainController', function($scope, dataService) {
 		$scope.newQuote.text = '';
 		$scope.newQuote.author = '';
 	};
+
+	/*SHOW/HIDE*/
+
+	$scope.showAdd = function() {
+		$scope.showAdd = !$scope.showAdd;
+		$scope.showFilter = false;
+		$scope.showRemove = false;
+	};
+
+	$scope.showRemove = function() {
+		$scope.showAdd = false;
+		$scope.showFilter = false;
+		$scope.showRemove = !$scope.showRemove;
+	}
+
+
+	$scope.showFilter = function() {
+		$scope.showAdd = false;
+		$scope.showFilter = !$scope.showFilter;
+		$scope.showRemove = false;
+	};
+
+
+	$scope.getQuotes();
 
 });

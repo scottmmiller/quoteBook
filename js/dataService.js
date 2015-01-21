@@ -43,8 +43,13 @@ app.service('dataService', function () {
 		};
 	};
 
-	this.removeData = function () {
-		if ()
+	this.removeData = function (text) {
+		for (var i = 0; i < quotes.length; i++) {
+			if (text === quotes[i].text) {
+				quotes.splice(i, 1);
+				i--;
+			};
+		};
 		
 
 	};

@@ -1,0 +1,28 @@
+html, body {
+	background: rgb(156, 204, 101);
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	font-family: 'Shadows Into Light Two', cursive;
+}
+
+header {
+
+	text-align: center;
+}
+
+.quotesList {
+	width: 33%;
+	margin: 0 auto;
+	
+}
+
+.inputBoxes {
+	width: 30%;
+	margin: 0 auto;
+}
+
+.buttons {
+	width: 25%;
+	margin: 0 auto;
+}
